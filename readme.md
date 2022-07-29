@@ -33,7 +33,30 @@
   - and change to database file `python manage.py migrate EmployeeApp`
 
 - add serializers
+
   - create file serializers in EmployeeApp
   - import `from rest_framework import serializers`
   - import `EmployeeApp.models import Departments, Employees`
   - create class DepartmentSerializer and EmployeeSerializer
+
+- APIs for Department screen : GET, PUT, POST and DELETE
+
+  - navigate to EmployeeApp/views.py
+  - import `from django.shortcuts import render`
+  - import `from django.views.decorators.csrf import csrf_eempy`
+  - import `from rest_framework.parsers import JSONParser`
+  - import `from django.core.files.storage import default_storage`
+    -import `from django.http.response import JsonResponse`
+
+  - import data `from EmployeeApp.models import Departments, Employees`
+  - import data `from EmployeeApp.serializers import DepartmentSerializer, EmployeeSerializer`
+
+  - add @csrf_exempt is a CSRF cookie that is based on a random secret value, which other sites will not have access to
+
+  - create function departmentApi and add condition request method GET, POST, PUT, DELETE
+
+  - create file EmployeeApp/urls.py and prepare url for access API
+    - import `from django.conf.urls import urls`
+    - import api method `from EmployeeApp import views` and create urlpatterns
+    - add api of EmployeeApp to main/urls.py and import `from django.urls import re_path` then add url from EmployeeApp to urlpatterns
+    - test api by post man `http://127.0.0.1:8000/department/`

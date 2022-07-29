@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 class Departments(models.Model):
-    DepartmentsId = models.AutoField(primary_key=True)
-    DepartmentsName = models.CharField(max_length=100)
+    DepartmentId = models.AutoField(primary_key=True)
+    DepartmentName = models.CharField(max_length=100)
 
 class Employees(models.Model):
     EmployeesId = models.AutoField(primary_key=True)
