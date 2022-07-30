@@ -55,8 +55,20 @@
 
   - create function departmentApi and add condition request method GET, POST, PUT, DELETE
 
-  - create file EmployeeApp/urls.py and prepare url for access API
+  - create file EmployeeApp/urls.py and prepare routi ng url for access API
     - import `from django.conf.urls import urls`
     - import api method `from EmployeeApp import views` and create urlpatterns
     - add api of EmployeeApp to main/urls.py and import `from django.urls import re_path` then add url from EmployeeApp to urlpatterns
     - test api by post man `http://127.0.0.1:8000/department/`
+
+- APIs for Employee screen : GET, PUT, POST and DELETE
+
+  - navigate to EmployeeApp/views.py and add function employeeApi
+    - navigate to EmployeeApp/urls.py and prepare routing url for access API function employeeApi
+  - test api by postman result are "ok"
+
+- API method yo Upload Photo
+  - import `import os` in file DjangoAPI/setting.py and add `MEDIA_URL = '/media/', MEDIA_ROOT = os.path.join(BASE_DIR,"media")`
+  - import `from django.core.files.storage import default_storage` in file EmployeeApp/views.py and create function SaveFile
+  - set routing url in file EmployeeApp/urls.py and add static route
+  - test file by using post method setting to uploadedFile and type is file
