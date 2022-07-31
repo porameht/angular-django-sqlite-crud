@@ -114,3 +114,29 @@
   - service get all department name `getAllDepartmentNames`
 
 - add routing to navigate
+
+  - navigate to file app-routing.module.ts and import `import { EmployeeComponent } from './employee/employee.component'`, `import { DepartmentComponent } from './department/department.component'`
+  - map path with component in routes section
+  - add `<router-outlet></router-outlet>` in file app.component.html
+  - test by `http://localhost:4200/employee`
+
+- instll bootstrap
+
+  - install bootstrap by `ng add @ng-bootstrap/ng-bootstrap`
+  - add stylesheet link to index.html and add js script within tag body
+
+- add bootstrap and add navbar within file app.component.html
+
+- show departments screen
+
+  - add DepartmentList empty array in file show-dep.component.ts
+  - import service `import {SharedService} from 'src/app/shared.service'`
+  - assign instant `private service:SharedService` to constructor of class ShowDepComponent
+  - create method refreshDepList and using asynchronous operation `this.DepartmentList = data`
+  - add refreshDepList in method ngOnInit it is the first that gets executed when this component is in scope
+  - navigate to file show-dep.component.html and create table add button edit delete from bootstrap
+  - put `selector: 'app-show-dep'` => `<app-show-dep></app-show-dep>` to department.component.html
+
+  - model pop-up window form `https://getbootstrap.com/docs/4.3/components/modal/` copy to file show-dep.components.html
+  - custom method to on button click and add `<app-add-edit-dep [dep]="dep" *ngIf="ActivateAddEditDepComp"></app-add-edit-dep>`
+  - create addClick and closeClick function in file show-dep.components.ts
