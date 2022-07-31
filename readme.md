@@ -72,3 +72,45 @@
   - import `from django.core.files.storage import default_storage` in file EmployeeApp/views.py and create function SaveFile
   - set routing url in file EmployeeApp/urls.py and add static route
   - test file by using post method setting to uploadedFile and type is file
+
+**angular ui**
+
+- create angular project `ng --version` and `ng new angular10`
+
+  - test run `ng serve --open`
+
+- generate components and services
+
+  - create component department by `ng generate component department`
+
+    - create the child component for showing data or deleting `ng generate component department/show-dep`
+    - create the child component for add and edit `ng generate component department/add-edit-dep`
+
+  - create component employee by `ng generate component employee`
+
+    - create the child component for showing data or deleting `ng generate component employee/show-emp`
+    - create the child component for add and edit `ng generate component employee/add-edit-emp`
+
+  - create service file `ng generate service shared`
+
+  - import service `import { SharedService } from './shared.service'` in file app.module.ts
+    - pass SharedService to providers
+
+- add service methods
+
+  - import module infile app.module.ts `import {HttpClientModule} from '@angular/common/http'` and `import {FormsModule, ReactiveFormsModule} from '@angular/forms'`
+  - pass `HttpClientModule`, `FormsModule`, `ReactiveFormsModule` to imports section
+  - navigate to shared.service.ts and import `import {HttpClient} from '@angular/common/http'`, `import {Observable} from 'rxjs'`
+  - defind readonly variable APIUrl and PhotoUrl within class SharedService
+
+  - assign instant private http: HttpClient to constructor
+
+  - service of department and employee
+
+    - create get method using `Observable` is a feature that provides support for delivering messages between different parts of your single-page application.
+    - create post, put, delete method
+
+  - service of photo `UploadPhoto`
+  - service get all department name `getAllDepartmentNames`
+
+- add routing to navigate
