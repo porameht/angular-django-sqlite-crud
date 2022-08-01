@@ -140,3 +140,19 @@
   - model pop-up window form `https://getbootstrap.com/docs/4.3/components/modal/` copy to file show-dep.components.html
   - custom method to on button click and add `<app-add-edit-dep [dep]="dep" *ngIf="ActivateAddEditDepComp"></app-add-edit-dep>`
   - create addClick and closeClick function in file show-dep.components.ts
+
+- department screen : add / edit
+
+  - add function editClick and pass dataItem to function within file show-dep.component.html
+  - create function editClick within class ShowDepComponent in file show-dep.component.ts
+  - add @Input within class AddEditDepComponent in file add-edit-dep.component.ts and initialze departmentId in ngOnInit
+  - add function addDepartment and updateDepartment within file add-edit-dep.component.html
+  - import service `import {SharedService} from 'src/app/shared.service'`
+  - create method addDepartment and updateDepartment within class AddEditDepComponent in file add-edit-dep.component.ts
+
+- department screen : delete
+
+  - add function deleteClick and pass dataItem to function within show-dep.component.html
+  - create function deleteClick within class ShowDepComponent in file show-dep.component.ts
+
+- show employee screen
