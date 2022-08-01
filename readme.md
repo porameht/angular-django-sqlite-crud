@@ -156,3 +156,20 @@
   - create function deleteClick within class ShowDepComponent in file show-dep.component.ts
 
 - show employee screen
+
+  - copy code html form file show-dep.component.html to show-emp.component.html
+  - copy code ts form file show-dep.component.ts to show-emp.component.ts and modify variable & method
+  - add `<app-show-emp></app-show-emp>` to file employee.component.html
+
+- upload photo, add/update employee screen
+
+  - copy code html form file add-edit-dep.component.html to add-edit-emp.component.html
+  - copy code ts form file add-edit-dep.component.ts to add-edit.component.ts and modify variable & method
+  - create method loadDepartmentList and pass to method ngOnInit
+  - create method uploadPhoto for upload photo and create function show img and upload image within file add-edit-emp.component.html
+
+- sorting and filtering
+  - navigate to file show-dep.component.ts and initialize variable `DepartmentIdFilter`, `DepartmentNameFilter`,`DepartmentListWithoutFilter`
+  - add DepartmentListWithoutFilter to method refreshDepList()
+  - create function FilterFn() and add to html in file show-dep.component.html
+  - create button sorting in file show-dep.component.html and create function sortResult in file show-dep.component.ts
